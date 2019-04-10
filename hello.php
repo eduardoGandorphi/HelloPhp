@@ -160,6 +160,22 @@ if( isset($_GET['param'])){
 }else{
 	echo 'NÃO tem parametro';	
 }
+echo '<br><br>';
+
+
+//header('Content-Type: text/plain');
+$docFile = "./targetFile.txt";
+$doc = file_get_contents($docFile);
+$linhas = explode("\n", $doc);
+foreach ($linhas as $linha) {
+	echo $linha.'<br>';
+}
+echo '<br><br>';
+
+$docWriteFile = "./docWriteFile2.txt";
+$content = 'my content \n haha.';
+file_put_contents($docWriteFile,$content, FILE_APPEND);
+echo '<br><br>';
 
 
 echo '<br><br>';
