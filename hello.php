@@ -40,11 +40,58 @@ $num--;
 echo  $num .'<br>';
 
 
-$inputed = 'test';
+$inputed = 'test2';
 if ($inputed == 'test'){
 	echo 'yes';
-} else {
+} else if($inputed != 'no test'){
+	echo '!= no test';
+} else if($inputed >= 'test2'){
+	echo 'no test2';
+}else {
 	echo 'no';
 }
 echo '<br>';
+
+
+// == > >= < <= !=
+// and or
+
+$nome = 'edu';
+$sobre = 'cinzento';
+
+if($nome == 'edu' and $sobre == 'gand'){
+	echo 'edu gand';
+}else if($nome == 'edu' and $sobre == 'cinzento'){
+	echo 'edu cinzento';
+}
+echo '<br>';
+
+
+//$myArray $arrayName = array('' => , );
+$myArray = array('joao','maria','jose');
+echo $myArray[1];
+echo '<br>';
+
+$idades = array('joao' => 10,'maria'=>16,'jose'=>20);
+echo $idades['jose'];
+echo '<br>';
+
+print_r($idades);
+echo '<br><br>';
+
+echo 'while<br>';
+$count = 0;
+
+while ($count < 5) {
+	echo 'looping, @'.$count++.'<br>';
+}
+echo '<br><br>';
+echo 'foreach<br>';
+foreach ($myArray as $i) {
+	echo 'looping, @'.$i.'<br>';
+}
+echo '<br><br>';
+
+
+echo '<br><br>';
 ?>
