@@ -177,6 +177,14 @@ $content = 'my content \n haha.';
 file_put_contents($docWriteFile,$content, FILE_APPEND);
 echo '<br><br>';
 
-
+$conn = mysql_connect("localhost:8013","php","php") or die(mysql_error());
+mysql_select_db("hellophp", $conn);
+$sql = "create table TESTE_TABLE
+{
+	Id int NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY(Id),
+	Texto varchar(20) NOT NULL
+}";
+mysql_query($sql, $conn);
 echo '<br><br>';
 ?>
