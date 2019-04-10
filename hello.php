@@ -102,10 +102,64 @@ foreach ($myArray as $i) {
 }
 echo '<br><br>';
 
-$nomeParam = $_GET['nomeParam'];
-$anoParam = $_GET['anoParam'];
-echo $nomeParam.' '.$anoParam;
 
+
+if( isset($_GET['nomeParam'])){
+	$nomeParam = $_GET['nomeParam'];
+	$anoParam = $_GET['anoParam'];
+	echo $nomeParam.' '.$anoParam;
+	echo '<br><br>';
+}
+
+if( isset($_POST['nomeParam'])){
+	$nomeParam = $_POST['nomeParam'];
+	$anoParam = $_POST['anoParam'];
+	echo $nomeParam.' '.$anoParam;
+	echo '<br><br>';
+}
+
+echo 'my func ';
+function MinhaFuncao($valor){
+  echo $valor;
+}
+MinhaFuncao('nome');
+echo '<br><br>';
+
+
+echo 'Plus function<br>';
+function Plus($var1, $var2){
+  echo 'answer is '. ($var1 + $var2);
+}
+Plus(3, 6);
+echo '<br><br>';
+
+echo date('d-m-y');
+echo '<br>';
+echo date('H-i-s');
+echo '<br>';
+echo date('l');
+echo '<br><br>';
+
+$frase = 'php não é ruim!';
+$pices =  explode(' ',$frase);
+foreach ($pices as $l) {
+	echo 'looping: '.$l . '<br>';
+}
+echo '<br><br>';
+
+
+$busca = strpos($frase, 'p');
+if($busca === false)
+	echo 'not found';
+else
+	echo $busca;
+
+echo '<br><br>';
+if( isset($_GET['param'])){
+	echo 'tem parametro';	
+}else{
+	echo 'NÃO tem parametro';	
+}
 
 
 echo '<br><br>';
